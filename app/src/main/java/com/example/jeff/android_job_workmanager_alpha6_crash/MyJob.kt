@@ -14,10 +14,7 @@ class MyJob : Job() {
 
     fun scheduleJob() {
       JobRequest.Builder(TAG)
-          .setExecutionWindow(1, 1)
-          .setRequiredNetworkType(JobRequest.NetworkType.CONNECTED)
-          .setRequirementsEnforced(true)
-          .setUpdateCurrent(true)
+          .setExecutionWindow(1, 1000)
           .build()
           .scheduleAsync()
     }
